@@ -3,22 +3,26 @@
     {
       "title": "JSON SERVER",
       "author": "foo",
-      "id": 1
+      "id": 1,
+      "editMode": false
     },
     {
       "title": "REACT",
       "author": "facebook",
-      "id": 2
+      "id": 2,
+      "editMode": false
     },
     {
       "title": "BOOTSTRAP",
       "author": "css master",
-      "id": 3
+      "id": 3,
+      "editMode": false
     },
     {
       "title": "MEDIUM",
       "author": "medium",
-      "id": 4
+      "id": 4,
+      "editMode": false
     }
   ]
 }

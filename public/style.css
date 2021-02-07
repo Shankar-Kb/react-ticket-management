@@ -1,8 +1,8 @@
 .root{
-    display: flex;
-    
+    display: flex; 
 }
-.new-ticket-box{
+
+#addNewTicket{
     position: relative;
     left: 50%;
     transform: translate(-50%);
