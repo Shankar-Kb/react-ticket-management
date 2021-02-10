@@ -3,6 +3,7 @@ import React from 'react';
 export const App = () => {
     const [posts, setPosts] = React.useState([]);
     //const [text, setText] = React.useState(" ");
+    const serverURL = "http://localhost:3001"
 
     const addTicket = () => {
         let data = {
@@ -11,7 +12,7 @@ export const App = () => {
         editMode: false
         }
         
-        fetch("http://localhost:3001/posts", {
+        fetch(`${serverURL}/posts`, {
               method: "POST",
               headers: {"Content-Type": "application/json; charset=UTF-8"},
               body: JSON.stringify(data)
@@ -22,7 +23,7 @@ export const App = () => {
     }
 
     function getTickets(){
-        fetch("http://localhost:3001/posts")
+        fetch(`${serverURL}/posts`)
             .then(resp => resp.json())
             .then(data => {
                 console.log(data);
@@ -31,7 +32,7 @@ export const App = () => {
     }
 
     const deleteTicket = (id) => {
-        fetch(`http://localhost:3001/posts/${id}`,
+        fetch(`${serverURL}/posts/${id}`,
            { method: "DELETE" })
            .then( resp => resp.json() )
            .then( data => { //console.log(data);
