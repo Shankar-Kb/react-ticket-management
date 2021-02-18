@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const App = () => {
+const App = () => {
     const [posts, setPosts] = React.useState([]);
     //const [text, setText] = React.useState(" ");
     //const serverURL = "http://localhost:3001";
@@ -129,4 +129,4 @@ export const App = () => {
     );
 }
 
-// export default App;
+export default App;
