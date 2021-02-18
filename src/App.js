@@ -3,7 +3,8 @@ import React from 'react';
 export const App = () => {
     const [posts, setPosts] = React.useState([]);
     //const [text, setText] = React.useState(" ");
-    const serverURL = "http://localhost:3001"
+    //const serverURL = "http://localhost:3001";
+    const serverURL = "https://json-server-react-ticket-mgmt.herokuapp.com"
 
     const addTicket = () => {
         let data = {
@@ -64,7 +65,7 @@ export const App = () => {
             id: id,
             editMode: false
         }
-        fetch(`http://localhost:3001/posts/${id}`,
+        fetch(`${serverURL}/${id}`,
            { method: "PUT",
              body: JSON.stringify(newData),
              headers: {"Content-Type": "application/json; charset=UTF-8"}
